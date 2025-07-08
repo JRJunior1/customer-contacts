@@ -1,0 +1,154 @@
+/* Existing base stays the same */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden; /* Page won't scroll */
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: #007bff;
+  margin: 0 0 20px 0;
+}
+
+#mainContainer {
+  flex: 1;
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  height: calc(100% - 80px); /* Adjust for body padding */
+}
+
+#formContainer {
+  flex: 1;
+  max-width: 400px;
+  overflow: hidden; /* Never scrolls */
+}
+
+#listContainer {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Important: container doesn’t scroll, only the table does */
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#search {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#tableContainer {
+  flex: 1; /* Fills remaining space in right column */
+  overflow-y: auto;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#tableContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+#tableContainer::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 0px 4px 4px 0px;
+}
+
+#tableContainer::-webkit-scrollbar-track {
+  background: #f7f9fc;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 700px;
+}
+
+table thead {
+  background-color: #007bff;
+  color: #fff;
+  position: sticky;
+  top: 0;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.delete-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  fill: #dc3545;
+  transition: fill 0.2s ease;
+}
+
+.delete-icon:hover {
+  fill: #a71d2a;
+}
+
+td.delete-cell {
+  text-align: center;
+}
+
+table td.notes-cell {
+  max-width: 150px; /* limit width so table stays neat */
+  white-space: normal; /* ✅ allow line breaks */
+  word-wrap: break-word; /* ✅ break long words if needed */
+}
+
+table td.class-cell {
+  max-width: 100px; /* limit width so table stays neat */
+  white-space: normal; /* ✅ allow line breaks */
+  word-wrap: break-word; /* ✅ break long words if needed */
+}

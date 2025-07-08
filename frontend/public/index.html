@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CUSTOMERS CONTACTS LIST</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>CUSTOMERS CONTACTS LIST</h1>
+
+    <div id="mainContainer">
+      <!-- Left column: Form -->
+      <div id="formContainer">
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="text" id="phone" placeholder="Phone" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <select id="tag">
+            <option value="VIP">VIP</option>
+            <option value="High Value">High Value</option>
+            <option value="New Lead" selected>New Lead</option>
+          </select>
+          <textarea id="notes" placeholder="Notes" maxlength="50"></textarea>
+          <!-- ✅ Limited -->
+          <button type="submit">Add Contact</button>
+        </form>
+      </div>
+
+      <!-- Right column: Search + Table -->
+      <div id="listContainer">
+        <input type="text" id="search" placeholder="Search contacts..." />
+        <div id="tableContainer">
+          <table id="contactTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Tag</th>
+                <th>Notes</th>
+                <th>Action</th>
+                <!-- ✅ ADD THIS -->
+              </tr>
+            </thead>
+
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
