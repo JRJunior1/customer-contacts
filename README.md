@@ -21,8 +21,8 @@ The backend handles the server, database connection, and customer operations. It
 - **Server**
   - `server.js`: Entry point for the Express server.
 - **Other Files**
-  - `package.json` & `package-lock.json`: Manage project dependencies.
-  - `node_modules/`: Installed backend dependencies.
+  - `package.json` & `package-lock.json`: Manage backend dependencies.
+  - `node_modules/`: Installed backend packages.
 
 ---
 
@@ -36,7 +36,7 @@ The frontend provides the user interface. It includes:
 
 ---
 
-## ⚙️ How to Clone the Repository
+## ⚙️ How to Fork & Clone the Repository
 
 1. **Fork the Repository**
 
@@ -93,28 +93,33 @@ The frontend provides the user interface. It includes:
 
 ---
 
+## ⚙️ Install Backend Dependencies
+
+```bash
+cd backend
+
+npm install express cors body-parser mysql2
+```
+
+This will add them to your `package.json` automatically.
+
+---
+
 ## ▶️ Running the Project
 
-1. **Install Backend Dependencies**
-
-   ```bash
-   cd backend
-   npm install
-   ```
-
-2. **Test Database Connection**
+1. **Test the Database Connection**
 
    ```bash
    node testConnection.js
    ```
 
-3. **Start the Backend Server**
+2. **Start the Backend Server**
 
    ```bash
    node server.js
    ```
 
-4. **Run the Frontend**
+3. **Run the Frontend**
 
    Open a **new terminal** and run:
 
